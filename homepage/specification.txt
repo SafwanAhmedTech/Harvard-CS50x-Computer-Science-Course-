@@ -1,0 +1,20 @@
+I used these 10 html tags:
+<h1>
+<h3>
+<p>
+<a>
+<label>
+<ul>
+<li>
+<div>
+<button>
+<input>
+I used these 5 cs properties:
+background-color
+font-family
+color
+margin
+padding
+text-align
+font-weight
+I used javascrip to change the button to green when it is clicked and I used bootstrap in my buttons as well

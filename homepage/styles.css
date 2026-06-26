@@ -1,0 +1,29 @@
+/* 1. Tag selector */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial;
+}
+
+/* 2. Tag selector */
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+/* 3. Class selector */
+.sport {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* 4. ID selector */
+#mc-feedback {
+    font-weight: bold;
+    color: green;
+}
+
+/* 5. ID selector */
+#fr-feedback {
+    font-weight: bold;
+    color: red;
+}
