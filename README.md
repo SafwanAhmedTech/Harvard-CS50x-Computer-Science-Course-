@@ -9,17 +9,28 @@ CS50x is an introduction to the intellectual enterprises of computer science and
 Throughout this course, I explored how computers work, how software is designed, and how to solve complex problems efficiently.
 
 Topics Covered
+
 🧠 Computational thinking and problem solving
+
 ⚙️ Algorithms and efficiency
+
 💻 Programming in C
+
 🗃️ Memory management and pointers
+
 🔢 Data structures
+
 🐍 Python programming
+
 🛢️ SQL databases
+
 🌐 HTML, CSS, and JavaScript
+
 🚀 Web development using Flask
 
+
 🛠️ Technologies Used
+
 C
 Python
 SQL
@@ -28,6 +39,7 @@ CSS
 JavaScript
 Flask
 Git & GitHub
+
 🎯 Skills Developed
 
 By completing CS50x, I developed experience in:
