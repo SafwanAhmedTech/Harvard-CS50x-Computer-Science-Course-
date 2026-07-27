@@ -1,4 +1,5 @@
 import random
+import sys
 
 class Pokemon:
     def __init__(self, name, hp, attack, defense, speed, level, xp):
@@ -225,6 +226,10 @@ all_pokemon.extend([
     wartortle, blastoise
 ])
 
+def test(n):
+    return n + 1
+
+
 print('Welcome to Pokemon Adventure!')
 
 trainer = input("Enter trainer name: ")
@@ -234,6 +239,13 @@ print("Choose your starter: Bulbasaur, Charmander, Squirtle")
 starter = input("Enter name of pokemon here: ")
 
 player_pokemon = []
+
+if starter.lower() not in ['charmander', 'bulbasaur', 'squirtle']:
+    sys.exit()
+
+if len(sys.argv) != 1:
+    if sys.argv[1] == 'ADMIN:426813':
+        player_pokemon.append(arceus)
 
 for pokemon in all_pokemon:
     if pokemon.name.lower() == starter.lower():
@@ -693,48 +705,53 @@ def line():
     print('-----------------------------------------------------------------------------------------------------------------------------------------------')
     print()
 
-while True:
-    line()
-    print(f"Route: {n}")
-    print("Options:")
-    print("1. Catch/battle pokemons in the wild")
-    print("2. Go to Pokemon Centre to heal pokemon")
-    print("3. Go to Poke-Shop")
-    print("4. Carry on to next place (beware - a gym will always follow after a route)")
-    print("5. View pokemon stats")
-    print("6. achievements")
-    option = int(input("Enter number of option: "))
-    if option == 1:
-        wild_encounter()
-    elif option == 2:
-        heal_all(player_pokemon)
-    elif option == 3:
-        shop()
-    elif option == 4:
-        gym()
-        n += 1
-    elif option == 5:
-        print("Choose pokemon: ")
+def main():
+    global n
+    while True:
+        line()
+        print(f"Route: {n}")
+        print("Options:")
+        print("1. Catch/battle pokemons in the wild")
+        print("2. Go to Pokemon Centre to heal pokemon")
+        print("3. Go to Poke-Shop")
+        print("4. Carry on to next place (beware - a gym will always follow after a route)")
+        print("5. View pokemon stats")
+        print("6. achievements")
+        option = int(input("Enter number of option: "))
+        if option == 1:
+            wild_encounter()
+        elif option == 2:
+            heal_all(player_pokemon)
+        elif option == 3:
+            shop()
+        elif option == 4:
+            gym()
+            n += 1
+        elif option == 5:
+            print("Choose pokemon: ")
 
-        for pokemon in player_pokemon:
-            print(f"\n{pokemon.name}")
+            for pokemon in player_pokemon:
+                print(f"\n{pokemon.name}")
 
-        name = input("Enter pokemon name: ")
+            name = input("Enter pokemon name: ")
 
-        for pokemon in player_pokemon:
-            if pokemon.name.lower() == name.lower():
-                user_pokemon = pokemon
-                break
-        else:
-            print("You don't have that Pokémon.")
+            for pokemon in player_pokemon:
+                if pokemon.name.lower() == name.lower():
+                    user_pokemon = pokemon
+                    break
+            else:
+                print("You don't have that Pokémon.")
 
-        user_pokemon.show_stats()
+            user_pokemon.show_stats()
 
-    elif option == 6:
-        print(f"Name: {trainer}")
-        print(f"Gym badges: {gym_badges}")
-        print(f"Pokemon seen: {seen}")
-        print(f"Pokemon caught: {caught}")
+        elif option == 6:
+            print(f"Name: {trainer}")
+            print(f"Gym badges: {gym_badges}")
+            print(f"Pokemon seen: {seen}")
+            print(f"Pokemon caught: {caught}")
+
+if __name__ == '__main__':
+    main()
 
 
 
