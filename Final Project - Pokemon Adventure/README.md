@@ -1,6 +1,6 @@
 Pokémon Adventure (Python)
 
-Video Demo: (https://youtu.be/iQ98YQGAFpA) (this video does not contain all features and just showcases briefly the main parts of the code)
+Video Demo: (https://youtu.be/iQ98YQGAFpA) (this video does not contain all features and it uses an older version of the code (new features have been added since then ) and just showcases briefly the main parts of the code)
 
 Description:
 
